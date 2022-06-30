@@ -16,6 +16,11 @@ ul {
 p{
     line-height: 1.5;
 }
+.container {
+  max-width: 1200px;
+  /* top, bottom - left, right  */
+  margin: 0 auto;
+}
 .header {
     background-color: rgb(255, 255, 255);
     color: #9eb23b;
@@ -41,12 +46,16 @@ p{
 .content__navbar li a {
     color: #9eb23b;
     font-weight: bold;
+    transition: color 0.3;
+}
+.content__navbar li a:hover {
+  color: #58641d;
 }
 .content{
     display: grid;
     grid-template-rows: repeat(2,1fr);
     width: 100vw;
-    height: 1000px;
+    height: 80vh;
     position: relative;
     justify-content: center;
 }
@@ -60,18 +69,16 @@ p{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  width: 100vw;
   height: 80vh;
   z-index: -1;
   }
-.body__slider img {
-    display: grid;
-    width: 100vw;      
-}
+
 .body__titulo {
     display: block;
     position: relative;
     z-index: 1;
-    left: 100px;
+    left: 250px;
     color: #e8fadf;
     font-family: 'Rubik', sans-serif;
 }
@@ -86,15 +93,12 @@ p{
     padding: 0 325px;
 }
 .card__content {
-    width: 100vw;
-    height:450px;    
     position: relative;
-    margin: 20px 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between; 
     justify-items: center;  
-    align-content: center;
+ 
 }
 .card__content div {
     position: relative;
@@ -102,17 +106,23 @@ p{
 }
 /* Tarjetas menú*/
 .body__card {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-color: #fff;
   padding: 20px;
   display: grid;
+  transition: opacity 0.3;
+}
+.body__card:hover {
+  opacity: 0.3;
 }
 .body__card a {
   text-transform: uppercase;
 }   
 .body__card img {
-  width: 100%;
+  width: 200px;
+height: 200px;
+  
   border-radius: 8px;
   margin-bottom: 20px;
 }  
